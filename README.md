@@ -95,7 +95,8 @@ ___Devices works on physical layer:  Hub, Repeater, Modem, Cables___
     * Logical Link control
     * Media acsess control 
 
-![picture alt](images/datalink.jfif "Title is optional")
+![picture alt](images/data'/[link.jfif "Title is optional")
+
 
 ## Functions of Data Link Layer
 
@@ -108,7 +109,7 @@ Adds physical address of sender and reciever to the headder of each frame
 ### Error Control
 bits added at end to detect error. Diffrent Error Correction & Detection algo used to control Error. and retransmit damaged packet
 
-[Error corrections & Detection: see only parity checking, CRC, LRC & Hamming code](https://www.electronicshub.org/error-correction-and-detection-codes/#:~:text=This%20code%20uses%20a%20number,any%20number%20of%20data%20bits.)
+[Error corrections & Detection: see only parity checking, CRC, LRC & Hamming code](https://www.electronicshub.org/error-correction-and-detection-codes)
 
 [Error Control Protocols- stop & wait Arq, Go back N ARQ, & Selective Repeat ARQ](https://www.tutorialspoint.com/error-control-in-data-link-layer)
 
@@ -139,7 +140,10 @@ ___Devices works on physical layer:  Switch & Bridge___
 ### Routing
 Determine the which route(shortest route) should be taken from source to destination. 
 
-[Routing Algorithm](https://www.tutorialspoint.com/what-is-a-routing-algorithm-in-computer-network#:~:text=A%20routing%20algorithm%20is%20a,in%20directing%20Internet%20traffic%20efficiently.&text=Routing%20algorithm%20mathematically%20computes%20the,packet%20can%20be%20routed%20through) 
+[Routing Algo](https://www.tutorialspoint.com/what-is-a-routing-algorithm-in-computer-network) 
+
+
+[DVR, RIP, IGP, EGP, OSPF, EIGRP](https://www.guru99.com/routing-protocol-types.html)
 
 ### Logical Addressing
 To uniquely identify each device network layer use logical addressing i.e IP address. The sender & receiver’s IP address are placed in the header of packet
@@ -172,3 +176,66 @@ ensures that the amount of time taken between two successive transmissions at th
 The network layer provides security by using a session key between the source and destination host. The network layer in the source host encrypts the payloads of datagrams being sent to the destination host. The network layer in the destination host would then decrypt the payload. In such a way, the network layer maintains the data integrity and source authentication services.
 
 ___Device works on Network Layer: Router___
+
+# Transport Layer
+
+
+* Heart of OSI :blush:
+* Data in transport layer referred as Segment.
+* Responsible for end to end delevery of complete message
+* at sender side take formated data from upper layer and perform Segmentation
+* Adds Port no to to header & forword to network layer
+* implement flow and error control to ensure proper data transmission.
+* At receiver’s side Transport Layer reads the port number from its header and forwards the Data which it has received to the respective application. It also performs sequencing and reassembling of the segmented data.
+  
+## Functions of Transport Layer
+
+### Segmentation & Reassembly:
+Take Message from session Layer and breaks into segment. add header to segments. and at reciver side reassemble theese segments.
+
+### Service Point Addressing:
+To delever message to correct process transport layer adds port no(Or Service Point Address) to header
+
+### Connection Control: 
+It includes 2 types:
+
+Connectionless Transport Layer : Each segment is considered as an independent packet and delivered to the transport layer at the destination machine.
+
+Connection Oriented Transport Layer : Before delivering packets, connection is made with transport layer at the destination machine.
+
+### Flow Control: 
+In this layer, flow control is performed end to end.
+
+### Error Control: 
+Error Control is performed end to end in this layer to ensure that the complete message arrives at the receiving transport layer without any error. Error Correction is done through retransmission
+
+## Services by Transport Layer:
+ 
+### Connection Oriented Service: 
+It is a three-phase process which include
+– Connection Establishment
+– Data Transfer
+– Termination / disconnection
+In this type of transmission, the receiving device sends an acknowledgement, back to the source after a packet or group of packet is received. This type of transmission is reliable and secure.
+
+### Connection less service: 
+It is a one-phase process and includes Data Transfer. In this type of transmission, the receiver does not acknowledge receipt of a packet. This approach allows for much faster communication between devices. Connection-oriented service is more reliable than connectionless Service.
+
+
+## What is Port Numer:
+* Port number is the part of the addressing information used to identify the senders and receivers of messages in computer networking.  
+* server identify the process by port no and send message to that process
+* diffrant protocol has diffrant set of port no's
+
+* Ports are represented by 16-bit numbers. 
+* 0 to 1023 are restricted port numbers are as they are used by well-known protocol services. 
+* 1024 to 49151 are registered port numbers means it can be registered to specific protocols by software corporations 
+*  49152 to 65536 are used as private ports means they can be used by anybody.
+
+[Why Error & flow control done at Trnsport layer while it is already in done DLL](https://gateoverflow.in/170085/error-control-layers-computer-networks-transport-layer-layers)
+
+[What is Socket](https://www.tutorialspoint.com/unix_sockets/what_is_socket.htm)
+
+[TCP & UDP](https://www.javatpoint.com/computer-network-transport-layer-protocols)
+
+
