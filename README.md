@@ -182,11 +182,12 @@ ___Device works on Network Layer: Router___
 
 * Heart of OSI :blush:
 * Data in transport layer referred as Segment.
-* Responsible for end to end delevery of complete message
+* Responsible for end to end (process to process )delevery of complete message
 * at sender side take formated data from upper layer and perform Segmentation
 * Adds Port no to to header & forword to network layer
 * implement flow and error control to ensure proper data transmission.
 * At receiver’s side Transport Layer reads the port number from its header and forwards the Data which it has received to the respective application. It also performs sequencing and reassembling of the segmented data.
+* Transport layer is operated by the Operating System. It is a part of the OS and communicates with the Application Layer by making system calls
   
 ## Functions of Transport Layer
 
@@ -239,3 +240,58 @@ It is a one-phase process and includes Data Transfer. In this type of transmissi
 [TCP & UDP](https://www.javatpoint.com/computer-network-transport-layer-protocols)
 
 
+# Session Layer
+
+* Responsible for establishing connection, maintain sessions & Authentication
+* Mintain Security
+
+## Functions of Session Layer
+
+### Establishment maintanance & Termination of Session
+
+Allows two process to make use & terminate connection between them
+
+### Syncronization 
+
+This Layer allow to add checkpoints. this checkpoints allow to identify errors. so that data resyncronize properly and avoid data loss
+
+### Dialog Controller
+The session layer allows two systems to start communication with each other in half-duplex or full-duplex
+
+### Token management. 
+Through this, it prevents the two users to simultaneously attempt the same critical operation
+
+
+# Presantation Layer 
+
+* Also called Translation layer
+* It extract data from application layer and manipulate as required 
+
+## Functions of Presantation Layer
+
+### Translation
+Translate data froam one format to anather like ASCII to EBCIDIC
+
+### Encryption/Decryption
+Plain text encrypted using key value in senders side. & decrypted at recivers side
+
+### Compression
+Reduce No of of data bits
+
+![picture](images/session.jpg)
+
+# Application Layer
+
+* This layer implemented by Application 
+* Theese application produce data that to transmit over network
+* This layer used to display recived information
+* The Appications are Like browsers or any other application that transmit data.
+
+## Functions of the Application layer
+Network Virtual Terminal
+FTAM-File transfer access and management
+Mail Services
+Directory Services
+
+
+![Picture](images/application.webp)
