@@ -288,10 +288,10 @@ Reduce No of of data bits
 * The Appications are Like browsers or any other application that transmit data.
 
 ## Functions of the Application layer
-Network Virtual Terminal
-FTAM-File transfer access and management
-Mail Services
-Directory Services
+* Network Virtual Terminal
+* FTAM-File transfer access and management
+* Mail Services
+* Directory Services
 
 
 ![Picture](images/application.webp)
