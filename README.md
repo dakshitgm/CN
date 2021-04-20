@@ -180,7 +180,7 @@ ___Device works on Network Layer: Router___
 # Transport Layer
 
 
-* Heart of OSI :blush:
+* Heart of OSI 
 * Data in transport layer referred as Segment.
 * Responsible for end to end (process to process )delevery of complete message
 * at sender side take formated data from upper layer and perform Segmentation
