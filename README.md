@@ -77,6 +77,12 @@ it defines mode of data flow between two connected device
 
 [Simplex, Half duplex & full Duplex](https://www.geeksforgeeks.org/difference-between-simplex-half-duplex-and-full-duplex-transmission-modes/)
 
+[Transnmission media](https://www.geeksforgeeks.org/types-transmission-media/)
+
+![Transmission media](images/transmedia.jpg)
+
+
+
 
 ___Devices works on physical layer:  Hub, Repeater, Modem, Cables___
 
@@ -95,7 +101,7 @@ ___Devices works on physical layer:  Hub, Repeater, Modem, Cables___
     * Logical Link control
     * Media acsess control 
 
-![picture alt](images/data'/[link.jfif "Title is optional")
+![picture alt](images/datalink.jfif "Title is optional")
 
 
 ## Functions of Data Link Layer
@@ -295,3 +301,59 @@ Reduce No of of data bits
 
 
 ![Picture](images/application.webp)
+
+# TCP/IP Model
+* Consist of 4 Layers
+  *  Application layer
+  *  Transport Layer
+  *  Internet Layer
+  *  Network accsess link layer
+  
+# Network Access layer
+* Combination of physical & Data link layer of OSI model
+* it send data using hardware addressing (mac)
+* diffrant Protocols used to transmission of data
+* Data is called a frame. It contains the IP packet(from upper layer) as well as a protocol header and trailer from this layer
+* This header and trailer are only relevant in the physical network. When a router receives a frame, it strips of the header and trailer and adds a new header and trailer.
+
+# Internet Layer
+
+* It is works like network layer of osi model
+* This layer has protocol for logical transmission of data
+
+## Protocols in Internet Layer
+
+### IP – 
+It is responsible for delivering packets from the source host to the destination host by looking at the IP addresses in the packet headers.
+
+## ICMP – 
+stands for Internet Control Message Protocol. It is encapsulated within IP datagrams and is responsible for providing hosts with information about network problems.
+
+### ARP – 
+stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address. ARP has several types: Reverse ARP, Proxy ARP, Gratuitous ARP and Inverse ARP
+
+
+# Transport Layer/ Host To Host Layer
+* works as transport layer of osi model
+* responsible for end to end communication and error free delevery of data
+  
+## Protocols in Transport layer
+
+### Transmission Control Protocol
+TCP is connection oriented protocolProvide reliable and error free transmission
+
+perform sequencing and segmentation: dividing data(from application layer) into segment give them a sequence no at senders side & reassemble accoring to theire sequence no in recivers side.
+
+sends acknoledgement on on data recived & control the flow of data
+
+### UDP protocol
+connectionless protocol & it does not not provide services like TCP
+ It is the go-to protocol if your application does not require reliable transport as it is very cost-effective.
+
+
+# Application Layer
+
+* Performs the functions of top three layers of the OSI model: Application, Presentation and Session Layer
+* responsible for no to node communication
+  
+[Protocols in Application Layer](https://gradeup.co/application-layer-protocols-dns-smtp-pop-ftp-http-i-ba1194bd-c5ab-11e5-9dcb-5849de73f8e1)
